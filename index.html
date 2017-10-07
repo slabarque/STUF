@@ -11,56 +11,32 @@
   <script>
     $(document).ready(
       function () {
+        $("#verhalenpopup").hide();
+        $("#conceptenpopup").hide();
+        $("#contactpopup").hide();
         $("#verhalen").click(function () {
           $("#verhalenpopup").toggle();
         });
-      });
-  </script>
-
-  <script>
-    $(document).ready(
-      function () {
         $("#concepten").click(function () {
           $("#conceptenpopup").toggle();
         });
-      });
-  </script>
-
-  <script>
-    $(document).ready(
-      function () {
         $("#contact").click(function () {
           $("#contactpopup").toggle();
         });
-      });
-  </script>
-
-  <script>
-    $(document).ready(
-      function () {
-        $("#contact2").click(function () {
-          $("#contactpopup").toggle();
+        $(".toggle").click(function () {
+          $(this).parent().toggleClass("hider shower")
         });
       });
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      $(".toggle").click(function () {
-        $(this).parent().toggleClass("hider shower")
-      });
-    });
   </script>
 </head>
 
 <body>
   <div class="wrapper">
-    <div class="container-fluid containerSTUF">
-      <div class="content">
+    <div class="container-fluid">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-12">
             <section id="sidebar1">
-              <ul class="nav">
+              <ul class="navSTUF">
                 <li>
                   <a href="index.html">
                     <u>objecten</u>
@@ -104,18 +80,18 @@
 
             </section>
           </div>
-          <div class="col-md-4">
-            <div id="headtitle">
+          <div class="col-lg-4 col-md-12">
+            <section id="headtitle">
               <a href="index.html">
                 <img src="img/stuflogo.jpg" / width="220px" height="150px" style="display:block;">
               </a>
-            </div>
-            <div id="products">
+            </section>
+            <section id="products">
               <ul class="product">
                 <li>
                   <a href="oat.html">
                     <p class="oat">OAT
-                      <img src="img/object/OAT/HOVERBEELD/OAT_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
+                      <img class="product-img" src="img/object/OAT/HOVERBEELD/OAT_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
                     </p>
                   </a>
                 </li>
@@ -123,7 +99,7 @@
                 <li>
                   <a href="hoat1.html">
                     <p class="hoat1">HOAT 1.0
-                      <img src="img/object/HOAT 1/HOVERBEELD/HOAT1_HOVERBEELD.jpg" / onload="this.width/=2;this.onload=null;">
+                      <img class="product-img" src="img/object/HOAT 1/HOVERBEELD/HOAT1_HOVERBEELD.jpg" / onload="this.width/=2;this.onload=null;">
                     </p>
                   </a>
                 </li>
@@ -131,7 +107,7 @@
                 <li>
                   <a href="kleerstaander.html">
                     <p class="kleerstaander">kleerstaander
-                      <img src="img/object/KLEERHANGER/HOVERBEELD/KLEERHANGER_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
+                      <img class="product-img" src="img/object/KLEERHANGER/HOVERBEELD/KLEERHANGER_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
                     </p>
                   </a>
                 </li>
@@ -139,7 +115,7 @@
                 <li>
                   <a href="hoat2.html">
                     <p class="hoat2">HOAT 2.0
-                      <img src="img/object/HOAT 2/HOVERBEELD/HOAT2_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
+                      <img class="product-img" src="img/object/HOAT 2/HOVERBEELD/HOAT2_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
                     </p>
                   </a>
                 </li>
@@ -147,7 +123,7 @@
                 <li>
                   <a href="hoat3.html">
                     <p class="hoat3">HOAT 3.0
-                      <img src="img/object/HOAT 3/HOVERBEELD/HOAT3_HOVERBEELD.jpg" / onload="this.width/=2;this.onload=null;">
+                      <img class="product-img" src="img/object/HOAT 3/HOVERBEELD/HOAT3_HOVERBEELD.jpg" / onload="this.width/=2;this.onload=null;">
                     </p>
                   </a>
                 </li>
@@ -155,15 +131,15 @@
                 <li>
                   <a href="fruitschaal.html">
                     <p class="fruitschaal">fruitschaal
-                      <img src="img/object/FRUITSCHAAL/HOVERBEELD/FRUITSCHAAL_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
+                      <img class="product-img" src="img/object/FRUITSCHAAL/HOVERBEELD/FRUITSCHAAL_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
                     </p>
                   </a>
                 </li>
               </ul>
-            </div>
           </div>
-          <div class="col-md-4">
-            <div id="verhalenpopup">
+          </section>
+          <div class="col-lg-4 col-md-12">
+            <section id="verhalenpopup">
 
 
               <p class="title1">Windows of Opportunity</p>
@@ -188,21 +164,45 @@
 
 
               </p>
-            </div>
+            </section>
           </div>
         </div>
-        <div class="row">
-          <div id="contactpopup">
-
-
-
-            <p class="contact">
-
+        <div id="contactpopup" class="row">
+          <div class="col-md-2 col-sm-12 mr-auto">
+            <p>
+              <span class="tg-contact">info@stuf.be</span>
+              <br>
+              <br>
+              <br>
+              <a href="https://www.facebook.com/Stuf-422311558099917/" target="_blank">
+                <img src="img/fb.jpg">
+              </a>
+              <a href="https://www.instagram.com/jielt/" target="_blank">
+                <img src="img/ig.jpg">
+              </a>
+            </p>
+          </div>
+          <div class="col-md-2  col-sm-12 mr-auto">
+            <p>
+              <span class="tg-contact">Jielt Gregoire</span>
+              <br>ontwerpt stuf
+              <br>jielt@stuf.be
+              <br>+32 479 384 246
+            </p>
+          </div>
+          <div class="col-md-2  col-sm-12 ">
+            <p>
+              <span class="tg-contact">Jonas Deketelaere</span>
+              <br>maakt stuf
+              <br>jonas@stuf.be
+              <br>+32 476 360 094
+            </p>
+          </div>
+          <!-- <p class="contact">
               <table class="tg">
                 <tr>
                   <th class="tg-contact">info@stuf.be
                     <br />
-
                     <a href="https://www.facebook.com/Stuf-422311558099917/" target="_blank">
                       <img src="img/fb.jpg" class="contactlogo">
                     </a>
@@ -226,7 +226,6 @@
                     <br />
                     <br />
 
-                    <!--<a href="#">lees meer</a>-->
                   </th>
                   <th class="tg-xspace">
                     <div id="contact2">
@@ -241,9 +240,8 @@
               <br />
               <br />
 
-            </p>
+            </p> -->
 
-          </div>
         </div>
         <!-- einde .content -->
       </div>

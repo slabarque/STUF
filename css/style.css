@@ -1,5 +1,5 @@
 @charset "utf-8";
-html, body {margin: 0; height: 100%; overflow: hidden}
+html, body {margin: 0;}
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	background-color: #FFF;
@@ -11,9 +11,10 @@ body {
 
 }
 .wrapper {
+	font-family: Helvetica, Verdana, sans-serif;
     height:     auto;       
     min-height: 100%;
-    margin:     0px auto;
+    margin:     50px 100px;
     padding:    0px auto;
  }
 
@@ -36,35 +37,9 @@ a:visited {
 	
 }
 
-
-.container {
-	width: 100%;
-	background-color: #FFF;
-	margin: 0 auto;
-	overflow: hidden;
-}
-
-      
-    
-
 #sidebar1 {
-	
-	width: 180px;
-    padding-bottom: 10px;
-
     font-size: 30px;
     font-family: Helvetica, Verdana, sans-serif;
-    margin-left: 165px;
-    margin-top: 3%;
-    float: left;
-	position:absolute;
-}
-.content {
-	font-family: Helvetica, Verdana, sans-serif;
-	
-	padding: 10px 0;
-	width: 100%;
-	float: left;
 }
 
 .content ul, .content ol { 
@@ -78,34 +53,24 @@ a:visited {
 #headtitle {
 	font-family:"Helvetica";
 	font-weight: bold;
-	font-size: 114px;
-	margin-left: 828px;
-	margin-top: 30px;
-	margin-right: auto;
-	float: left;
-	
-	
 }
 #products {
 	text-align:center;
 	font-family:"Helvetica";
 	font-weight: regular;
 }
-
 .product{
 	list-style: none; 
 	text-decoration: none;
-	font-size:56px;
+	font-size:3em;
 
 	}
 .product a{
 	text-decoration: none;}
 	
-img{
+img.product-img{
     display: none
 }
-
-p{margin:-20px 3px 0px 3px;}
 
 /* ~~ hover producten img ~~ */
 p.oat:hover img{
@@ -176,46 +141,43 @@ p.post{
 	}
 p.concepten{
 	font-size:16px;
-	margin-bottom:10px;
-	width:475px;
 	line-height: 21px;
 	z-index:0;
-	
 	}
-	/*stijl lijst nav */
-ul.nav {	
+	/*stijl lijst navSTUF */
+ul.navSTUF {	
 
 	list-style: none; 
 	margin-bottom: 5px; 
 }
-ul.nav li:active {	
+ul.navSTUF li:active {	
 
 	list-style: none; 
 	 
 	text-decoration:underline;
 }
-ul.nav li:visited {	
+ul.navSTUF li:visited {	
 
 	list-style: none; 
 	 
 	text-decoration:underline;
 }
-ul.nav li:hover {	
+ul.navSTUF li:hover {	
 
 	list-style: none; 
 	
 	text-decoration:underline;
 }
-ul.nav li a:active{	
+ul.navSTUF li a:active{	
 
 	list-style: none; 
 	
 	text-decoration:underline;
 }
-ul.nav li {
+ul.navSTUF li {
 	/*link lijst*/
 }
-ul.nav a, ul.nav a:visited { 
+ul.navSTUF a, ul.navSTUF a:visited { 
 	padding: 3px 3px 3px 15px;
 	 
 	width: 160px;  
@@ -223,34 +185,22 @@ ul.nav a, ul.nav a:visited {
 
 }
 
-ul.nav a:active{text-decoration:underline;}
+ul.navSTUF a:active{text-decoration:underline;}
 
-#verhalenpopup {
-    display: none;
-}
 ::-webkit-scrollbar { 
     display: none; 
-}
-#verhalenpopup {
-	}
-	
-#conceptenpopup {
-    display: none;
-}
-#conceptenpopup {
-	}
-#contactpopup {
-    display: none;
 }
 #contactpopup {
 	border-top:solid 1px;
 	text-align:left;
 	background-color:#FFF;
-	}
-.contactlogo{display:block; float:left; margin-top:45px;margin-right:15px; margin-left:-5px;}
-.contactlogo2{display:block;   margin-top:45px;}
+	font-size:20px;font-weight:normal;
+}
+
+/* .contactlogo{display:block; float:left; margin-top:45px;margin-right:15px; margin-left:-5px;}
+.contactlogo2{display:block;   margin-top:45px;} */
 	
-.tg  {border-collapse:collapse;border-spacing:0;}
+/* .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-size:22px;padding-top:15px;overflow:hidden;word-break:normal;padding-right:15px;}
 .tg th{font-size:20px;font-weight:normal;padding-top:37px;overflow:hidden;word-break:normal;}
 .tg .tg-leesmeer{text-decoration:underline;width:210px;}
@@ -261,7 +211,7 @@ ul.nav a:active{text-decoration:underline;}
 .tg-leesmeerspace{width:300px;}
 .tg-xspace{width:365px;}
 .tg .tg-x{}
-.tg .tg-x a img{ text-decoration:none; display:block;}
+.tg .tg-x a img{ text-decoration:none; display:block;} */
 
 #concepten{margin-top:-12px;}
 #verhalen{margin-top:-12px;}
@@ -280,13 +230,13 @@ ul.nav a:active{text-decoration:underline;}
 	font-size:46px;
 	}
 	
-.tg  {border-collapse:collapse;border-spacing:0;}
+/* .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{overflow:hidden;}
 .tg th{overflow:hidden;}
 .tg .tg-wxgh{text-decoration:underline;vertical-align:top}
 .tg .tg-wknv{font-size:36px; vertical-align:top;letter-spacing:-2px;}
 .tg .tg-ulvc{font-size:85px; text-align:left; letter-spacing:-5px;}
-.tg .tg-yw4l{vertical-align:top; font-size:18px;line-height: 20px;}
+.tg .tg-yw4l{vertical-align:top; font-size:18px;line-height: 20px;} */
 
 #specpopup {
     display: none;
