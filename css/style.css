@@ -1,0 +1,462 @@
+@charset "utf-8";
+html, body {margin: 0; height: 100%; overflow: hidden}
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FFF;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	height:100%;
+	overflow:none;
+
+}
+.wrapper {
+    height:     auto;       
+    min-height: 100%;
+    margin:     0px auto;
+    padding:    0px auto;
+ }
+
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+
+
+a img { 
+	border: none;
+}
+
+a:link {
+	color: #000;
+
+}
+a:visited {
+	color: #000;
+	
+}
+
+
+.container {
+	width: 100%;
+	background-color: #FFF;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+      
+    
+
+#sidebar1 {
+	
+	width: 180px;
+    padding-bottom: 10px;
+
+    font-size: 30px;
+    font-family: Helvetica, Verdana, sans-serif;
+    margin-left: 165px;
+    margin-top: 3%;
+    float: left;
+	position:absolute;
+}
+.content {
+	font-family: Helvetica, Verdana, sans-serif;
+	
+	padding: 10px 0;
+	width: 100%;
+	float: left;
+}
+
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px;
+}
+
+@font-face {
+    font-family:"AntiqueOliveStd-Bold";
+    src:url(fonts/AntiqueOliveStd-Bold.otf);
+}
+#headtitle {
+	font-family:"Helvetica";
+	font-weight: bold;
+	font-size: 114px;
+	margin-left: 828px;
+	margin-top: 30px;
+	margin-right: auto;
+	float: left;
+	
+	
+}
+#products {
+	text-align:center;
+	font-family:"Helvetica";
+	font-weight: regular;
+	margin-top: 13%;
+	margin-right: auto;
+	margin-left:728px;
+	float: left;	
+	position:absolute;
+}
+
+.product{
+	list-style: none; 
+	text-decoration: none;
+	font-size:56px;
+
+	}
+.product a{
+	text-decoration: none;}
+	
+img{
+    display: none
+}
+
+p{margin:-20px 3px 0px 3px;}
+
+/* ~~ hover producten img ~~ */
+p.oat:hover img{
+    display: block;
+	margin-left:400px;
+	margin-top:-206px;
+	margin-right:auto;
+	float:left;
+	position:absolute;
+	z-index:999;
+}
+p.hoat1:hover img{
+    display: block;
+	margin-left:-480px;
+	margin-top:80px;
+	float:left;
+	position:absolute;
+	z-index:1;
+}
+p.hoat3:hover img{
+    display: block;
+	margin-left:-680px;
+	margin-top:-160px;
+	float:left;
+	position:absolute;
+	z-index:999;
+}
+p.fruitschaal:hover img{
+    display: block;
+	margin-left:403px;
+	margin-top:-400px;
+	float:left;
+	position:absolute;
+	z-index:999;
+}
+p.kleerstaander:hover img{
+    display: block;
+	margin-left:450px;
+	margin-top:-120px;
+	float:left;
+	position:absolute;
+	z-index:999;
+}
+p.hoat2:hover img{
+    display: block;
+	margin-left:-650px;
+	margin-top:-180px;
+	float:left;
+	position:absolute;
+	z-index:999;/*Z-index om afb boven/onder alles te laten verschijnen bij hover*/
+}
+
+	/*stijl posts verhalen*/
+p.title1{
+	font-size:36px;
+	margin-top:10px;
+	margin-bottom:-8px;}
+p.date{
+	font-size:13px;
+	font-stretch:narrower;
+	margin-top:0px;
+	margin-bottom:30px;}
+p.post{
+	font-size:16px;
+	margin-bottom:10px;
+	border-bottom:1px solid #000;
+	line-height: 21px;
+	}
+p.concepten{
+	font-size:16px;
+	margin-bottom:10px;
+	width:475px;
+	line-height: 21px;
+	z-index:0;
+	
+	}
+	/*stijl lijst nav */
+ul.nav {	
+
+	list-style: none; 
+	margin-bottom: 5px; 
+}
+ul.nav li:active {	
+
+	list-style: none; 
+	 
+	text-decoration:underline;
+}
+ul.nav li:visited {	
+
+	list-style: none; 
+	 
+	text-decoration:underline;
+}
+ul.nav li:hover {	
+
+	list-style: none; 
+	
+	text-decoration:underline;
+}
+ul.nav li a:active{	
+
+	list-style: none; 
+	
+	text-decoration:underline;
+}
+ul.nav li {
+	/*link lijst*/
+}
+ul.nav a, ul.nav a:visited { 
+	padding: 3px 3px 3px 15px;
+	 
+	width: 160px;  
+	text-decoration: none;
+
+}
+
+ul.nav a:active{text-decoration:underline;}
+
+#verhalenpopup {
+    display: none;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+#verhalenpopup {
+	padding:20px 10px 20px 20px;
+	width:400px;
+	height:644px;
+	margin-left:68%;
+	margin-top:50px;
+	position:absolute;
+	overflow:auto;
+	}
+	
+#conceptenpopup {
+    display: none;
+}
+#conceptenpopup {
+	
+	width:650px;
+	height:800px;
+	margin-top:14%;
+	margin-left:220px;
+	position:absolute;
+	}
+#contactpopup {
+    display: none;
+}
+#contactpopup {
+	border-top:solid 1px;
+	text-align:left;
+	width:78%;
+	height:152px;
+	bottom:0;
+	margin-left:220px;
+	background-color:#FFF;
+	z-index:999;
+	position:absolute;
+	}
+.contactlogo{display:block; float:left; margin-top:45px;margin-right:15px; margin-left:-5px;}
+.contactlogo2{display:block;   margin-top:45px;}
+	
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-size:22px;padding-top:15px;overflow:hidden;word-break:normal;padding-right:15px;}
+.tg th{font-size:20px;font-weight:normal;padding-top:37px;overflow:hidden;word-break:normal;}
+.tg .tg-leesmeer{text-decoration:underline;width:210px;}
+.tg .leesmeer{!important;vertical-align:bottom}
+.tg .tg-contact{vertical-align:top;width:248px;	line-height: 26px;}
+.tg-leftspace{width:400px;}
+.tg-midspace{width:400px;}
+.tg-leesmeerspace{width:300px;}
+.tg-xspace{width:365px;}
+.tg .tg-x{}
+.tg .tg-x a img{ text-decoration:none; display:block;}
+
+#concepten{margin-top:-12px;}
+#verhalen{margin-top:-12px;}
+#contact{margin-top:-12px;}
+
+#fruitbasket{height:300px;}
+
+#productinfo{
+	margin-top:48%;
+	float:left;
+	margin-left:-58%}
+.producttitle{
+	font-size:76px;
+	}
+.info{
+	font-size:46px;
+	}
+	
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{overflow:hidden;}
+.tg th{overflow:hidden;}
+.tg .tg-wxgh{text-decoration:underline;vertical-align:top}
+.tg .tg-wknv{font-size:36px; vertical-align:top;letter-spacing:-2px;}
+.tg .tg-ulvc{font-size:85px; text-align:left; letter-spacing:-5px;}
+.tg .tg-yw4l{vertical-align:top; font-size:18px;line-height: 20px;}
+
+#specpopup {
+    display: none;
+}
+#specpopup2 {
+    display: none;
+}
+#blauwstaal_popup {
+    display: none;
+}
+#hout_popup {
+    display: none;
+}
+#leisteen_popup {
+    display: none;
+}
+#padoek_popup {
+    display: none;
+}
+#chemisch_popup {
+    display: none;
+}
+#was_popup {
+    display: none;
+}
+#staal_popup {
+    display: none;
+}
+#katoen_popup {
+    display: none;
+}
+#keramiek_popup {
+    display: none;
+}
+#leisteen_popup {
+    display: none;
+}
+/* ~~ img slider ~~ */
+#slider {
+	float:left;
+  position: relative;
+  overflow: hidden;
+  margin-top:238px;
+  margin-left:-640px;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+   	width: 1100px;
+   	height: 720px;
+	background-color:#FFF;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  color: #000;
+ 
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 38px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+#next_object{
+bottom:0;
+margin-bottom:20px;
+margin-left:1800px;
+position:absolute;
+}
+#prev_object{
+bottom:0;
+margin-bottom:20px;
+margin-left:50px;
+position:absolute;
+}
+/* ~~ misc float/clear classes ~~ */
+
+.fltrt {  
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { 
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+
+
+.hider {}
+
+.shower .hidden {}
+
+.hider .hidden {
+    display: none;
+}
+
+.shower .toggle 
+{
+  text-decoration: underline;
+}

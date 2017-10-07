@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>STUF - Kleerstaander</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+   
+jQuery(document).ready(function ($) {
+
+  $('#checkbox').change(function(){
+    setInterval(function () {
+        moveRight();
+    }, 3000);
+  });
+  
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 1, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 1, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+});  
+
+    </script>  
+    
+     <script>
+	 
+    $(document).ready(
+	  function() {
+    $("#specificaties").click(function() {
+      $("#specpopup").toggle();
+    });
+  });
+    </script>
+    
+     <script>
+    $(document).ready(
+	  function() {
+    $("#blauwstaal").click(function() {
+      $("#blauwstaal_popup").toggle();
+    });
+  });
+    </script>
+    
+      <script>
+    $(document).ready(
+	  function() {
+    $("#hout").click(function() {
+      $("#hout_popup").toggle();
+    });
+  });
+    </script>
+</head>
+
+<body style="overflow:auto;">
+<div class="wrapper">
+
+<div class="container">
+    
+      <div class="content">
+      
+        <div id="headtitle"><a href="index.html"><img src="img/stuflogo.jpg"/ width="220px" height="150px" style="display:block;"></a></div>
+        
+        <div id="sidebar1">
+            <ul class="nav">
+              <li><a href="index.html">objecten</a></li>
+              <div id="concepten">	<li><a href="index.html">concept</a></li>	</div>
+              <div id="verhalen">	<li><a href="index.html">verhalen</a></li>	</div>
+              <div id="contact">	<li><a href="index.html">contact</a></li>	</div>
+            </ul>
+            <p>&nbsp;</p>
+            </div>
+        <div id="fruitbasket">
+        
+        <div id="slider">
+  <a href="#" class="control_next"><img src="img/arrow2.png" style="width:50px; height:50px; display:block;"></a>
+  <a href="#" class="control_prev"><img src="img/arrow.png" style="width:50px; height:50px; display:block;"></a>
+  <ul>
+    <li><img src="img/object/KLEERHANGER/KLEERHANGER_3.jpg" style="display:block; height:720px; width:1100px;"></li>
+     <li><img src="img/object/KLEERHANGER/KLEERHANGER_2.jpg" style="display:block;height:720px;width: 493px;margin-left: 271px;"></li>
+      <li><img src="img/object/KLEERHANGER/KLEERHANGER_1x.jpg" style="display:block;height:720px;width: 493px;margin-left: 271px;"></li>
+ 
+  </ul>  
+</div>
+            
+        <div id="productinfo">
+            <table class="tg">
+  <tr>
+    <th class="tg-ulvc" colspan="5">kleerstaander</th>
+  </tr>
+  <tr>
+    <td class="tg-wknv">storagespace</td>
+    <td class="tg-031e"></td>
+    <td class="tg-wknv"> <div id="blauwstaal">100% <a href="#" style="text-decoration:underline;">blauwstaal</a></div> <div id="hout">*10% <a href="#" style="text-decoration:underline;">hout</a></div></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-wxgh"><div id="specificaties"><a href="#">specificaties</a></div></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><div id="tekstwrapperino" style="width:450px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Het object Kleerstaander, dat oorspronkelijk werd ontworpen voor een pop-up project, vormt door zijn elegante ontwerp tevens de perfecte eyecatcher in een residentiële omgeving.<br />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Het roestvaste blauwstalen kader omlijst letterlijk de kledingstukken, waardoor het ontwerp naast een praktische ook een esthetische functie krijgt. De elegantie van de verjongende eikenhouten pootjes, geïnspireerd op het Mid-Century modern design, zorgt voor een mooi contrast met het ruwe karakter van het blauwstaal. Om zo weinig mogelijk verlies te genereren bij de productie, zijn de afmetingen van het Kleerstaander gebaseerd op de standaardmaten van de gebruikte staalplaten, zonder in te boeten aan functionaliteit. 
+<br />
+<br />
+
+*Alle creaties kunnen, in samenspraak met de designers, gecustomized worden wat betreft afmetingen, materiaalkeuze en afwerking</div></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l" style="width:300px;"><div id="blauwstaal_popup">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Het zichtbare ruwe karakter van het blauwstaal ligt niet alleen volledig in de lijn van de collectie, het betreft hier tevens een staalsoort die minder gevoelig is voor roest dan gelijken.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deze relatieve roestvastheid wordt nog eens verhoogd door het aanbrengen van een kleurloze waxlaag, die de eigenheid van het blauwglanzende staal tevens volledig bewaard.”<br /><br />
+
+</div>
+<div id="hout_popup">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;De keuze voor eikenhout past volledig binnen de filosofie van stuf. Enerzijds betreft het een lokale, sterke houtsoort die bekend staat om zijn duurzaamheid, anderzijds is het één van de weinige houtsoorten waarop we de techniek van het roken konden toepassen.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Roken biedt het voordeel dat het hout in sneltempo in een natuurlijk verouderingsproces terechtkomt, waardoor verdere veroudering wordt tegengegaan</div>
+</td>
+
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"><div id="specpopup"><img src="img/TTtest.jpg" style="display:block; height:200px; width:250px;"><br>*Alle creaties kunnen,<br /> in samenspraak met de designers, <br />gecustomized worden wat betreft<br /> afmetingen, materiaalkeuze<br /> en afwerking</div></td>
+  </tr>
+   <tr>
+    <td class="tg-yw4l"><!--leeg --></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"><!--leeg --></td>
+    <td class="tg-yw4l"><!--leeg --></td>
+    <td class="tg-yw4l"><!--leeg --></td>
+  </tr>
+</table>
+          </div>
+          
+            </div>
+          
+     
+
+
+</div>
+
+ <div id="prev_object">
+	 <a href="hoat1.html" class="prev_object">
+ 		<img src="img/arrow.png" style="width:50px; height:50px; display:block;">
+      </a>
+ </div>
+ 
+  <div id="next_object">
+	 <a href="hoat2.html" class="prev_object">
+ 		<img src="img/arrow2.png" style="width:50px; height:50px; display:block;">
+      </a>
+ </div>
+    <!-- einde .content --></div>
+  <!-- einde .container --></div>
+  <!-- einde wrapperino --></div>
+</body>
+</html>

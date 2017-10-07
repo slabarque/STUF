@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>STUF - HOAT 2.0</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+   
+jQuery(document).ready(function ($) {
+
+  $('#checkbox').change(function(){
+    setInterval(function () {
+        moveRight();
+    }, 3000);
+  });
+  
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 1, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 1, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+});  
+
+    </script>  
+    
+     <script>
+	 
+    $(document).ready(
+	  function() {
+    $("#specificaties").click(function() {
+      $("#specpopup").toggle();
+    });
+  });
+    </script>
+    
+                 <script>
+    $(document).ready(
+	  function() {
+    $("#katoen").click(function() {
+      $("#katoen_popup").toggle();
+    });
+  });
+    </script>
+    
+      <script>
+    $(document).ready(
+	  function() {
+    $("#hout").click(function() {
+      $("#hout_popup").toggle();
+    });
+  });
+    </script>
+    
+        <script>
+    $(document).ready(
+	  function() {
+    $("#keramiek").click(function() {
+      $("#keramiek_popup").toggle();
+    });
+  });
+    </script>
+</head>
+
+<body style="overflow:auto;">
+<div class="wrapper">
+
+<div class="container">
+    
+      <div class="content">
+      
+        <div id="headtitle"><a href="index.html"><img src="img/stuflogo.jpg"/ width="220px" height="150px" style="display:block;"></a></div>
+        
+        <div id="sidebar1">
+            <ul class="nav">
+              <li><a href="index.html">objecten</a></li>
+              <div id="concepten">	<li><a href="index.html">concept</a></li>	</div>
+              <div id="verhalen">	<li><a href="index.html">verhalen</a></li>	</div>
+              <div id="contact">	<li><a href="index.html">contact</a></li>	</div>
+            </ul>
+            <p>&nbsp;</p>
+            </div>
+        <div id="fruitbasket">
+        
+        <div id="slider">
+ <a href="#" class="control_next"><img src="img/arrow2.png" style="width:50px; height:50px; display:block;"></a>
+  <a href="#" class="control_prev"><img src="img/arrow.png" style="width:50px; height:50px; display:block;"></a>
+  <ul>
+    <li><img src="img/object/HOAT 2/HOAT2_1x.jpg" style="display:block; height:720px; width:1100px;"></li>
+    <li><img src="img/object/HOAT 2/HOAT2_2.jpg" style="display:block; height:720px; width:1100px;"></li>
+    <li><img src="img/object/HOAT 2/HOAT2_3.jpg" style="display:block; height:720px; width:1100px;"></li>
+  
+  </ul>  
+</div>
+            
+        <div id="productinfo">
+            <table class="tg">
+  <tr>
+    <th class="tg-ulvc" colspan="5">HOAT 2.0</th>
+  </tr>
+  <tr>
+    <td class="tg-wknv">storagespace</td>
+    <td class="tg-031e"></td>
+    <td class="tg-wknv"> <div id="katoen">5% <a href="#" style="text-decoration:underline;">katoen</a></div> <div id="keramiek">25% <a href="#" style="text-decoration:underline;">keramiek</a></div><div id="hout">60% <a href="#" style="text-decoration:underline;">hout</a></div></td>
+    
+  <td class="tg-wxgh"><div id="specificaties"><a href="#">specificaties</a></div></td>--> 
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><div id="tekstwrapperino" style="width:450px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deze variant is de basiscreatie en werd dan ook als eerste in het leven geroepen. 
+De kuip wordt gemaakt uit afgedankte stalen lijmvaten, gecombineerd met padoek pootjes voorzien van een waslaag voor zowel het tafelblad als de pootjes.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Voor de zitting bestaat de keuze uit katoen, afkomstig van stof dat oorspronkelijk was bestemd voor militaire kostuums of leder.<br />
+De houten en stalen onderdelen worden steeds voorzien van een beschermende waslaag.</div>
+</td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l" style="width:300px;">
+    
+  <!-- <div id="katoen_popup">Katoen tekst<br /><br /></div>-->
+    
+<div id="keramiek_popup">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;De antracietkleurige keramieken kuip wordt handgemaakt uit zwartmakende klei. Eén van de belangrijkste eigenschappen van keramiek is de slijtvastheid. <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keramiek heeft zijn plaats in de collectie echter ook te danken aan het feit dat het een materiaal dat zich perfect leent tot een ruwe afwerking. Om de ruwe uitstraling maximaal te bewaren werd bovendien gekozen de keramiek niet te behandelen.<br /><br />
+
+</div>
+
+<div id="hout_popup">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;De keuze voor eikenhout past volledig binnen de filosofie van stuf. Enerzijds betreft het een lokale, sterke houtsoort die bekend staat om zijn duurzaamheid, anderzijds is het één van de weinige houtsoorten waarop we de techniek van het roken konden toepassen.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Roken biedt het voordeel dat het hout in sneltempo in een natuurlijk verouderingsproces terechtkomt, waardoor verdere veroudering wordt tegengegaan<br /><br /></div>
+</td>
+    <td class="tg-yw4l"><div id="specpopup"><img src="img/object/ttkrukje.jpg" style="display:block; height:250px; width:250px;"><br>Ontworpen en gemaakt in België.<br>Kan op maat besteld worden.</div></td>
+  </tr>
+   <tr>
+    <td class="tg-yw4l"><!--leeg --></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"><!--leeg --></td>
+    <td class="tg-yw4l"><!--leeg --></td>
+    <td class="tg-yw4l"><!--leeg --></td>
+  </tr>
+</table>
+          </div>
+          
+            </div>
+          
+     
+
+
+</div>
+<div id="prev_object">
+	 <a href="kleerstaander.html" class="prev_object">
+ 		<img src="img/arrow.png" style="width:50px; height:50px; display:block;">
+      </a>
+ </div>
+ 
+  <div id="next_object">
+	 <a href="hoat3.html" class="prev_object">
+ 		<img src="img/arrow2.png" style="width:50px; height:50px; display:block;">
+      </a>
+ </div>
+    <!-- einde .content --></div>
+  <!-- einde .container --></div>
+  <!-- einde wrapperino --></div>
+</body>
+</html>

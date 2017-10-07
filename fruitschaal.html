@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>STUF - Fruitschaal</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+   
+jQuery(document).ready(function ($) {
+
+  $('#checkbox').change(function(){
+    setInterval(function () {
+        moveRight();
+    }, 3000);
+  });
+  
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 1, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 1, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+});  
+
+    </script>  
+    
+     <script>
+	 
+    $(document).ready(
+	  function() {
+    $("#specificaties").click(function() {
+      $("#specpopup").toggle();
+    });
+  });
+    </script>
+    
+        <script>
+    $(document).ready(
+	  function() {
+    $("#hout").click(function() {
+      $("#hout_popup").toggle();
+    });
+  });
+    </script>
+    
+        <script>
+    $(document).ready(
+	  function() {
+    $("#staal").click(function() {
+      $("#staal_popup").toggle();
+    });
+  });
+    </script>
+    
+</head>
+
+<body style="overflow:auto;">
+<div class="wrapper">
+
+<div class="container">
+    
+      <div class="content">
+      
+        <div id="headtitle"><a href="index.html"><img src="img/stuflogo.jpg"/ width="220px" height="150px" style="display:block;"></a></div>
+        
+        <div id="sidebar1">
+            <ul class="nav">
+              <li><a href="index.html">objecten</a></li>
+              <div id="concepten">	<li><a href="index.html">concept</a></li>	</div>
+              <div id="verhalen">	<li><a href="index.html">verhalen</a></li>	</div>
+              <div id="contact">	<li><a href="index.html">contact</a></li>	</div>
+            </ul>
+            <p>&nbsp;</p>
+            </div>
+        <div id="fruitbasket">
+        
+        <div id="slider">
+ <a href="#" class="control_next"><img src="img/arrow2.png" style="width:50px; height:50px; display:block;"></a>
+  <a href="#" class="control_prev"><img src="img/arrow.png" style="width:50px; height:50px; display:block;"></a>
+  <ul>
+    <li><img src="img/object/FRUITSCHAAL/FRUITSCHAAL_1.jpg" style="display:block; height:720px; width:1100px;"></li>
+    <li><img src="img/object/FRUITSCHAAL/FRUITSCHAAL_2x.jpg" style="display:block; height:720px; width:1100px;"></li>
+    <li><img src="img/object/FRUITSCHAAL/FRUITSCHAAL_3.jpg" style="display:block; height:720px; width:1100px;"></li>
+
+  
+  </ul>  
+</div>
+            
+        <div id="productinfo">
+            <table class="tg">
+  <tr>
+    <th class="tg-ulvc" colspan="5">fruitschaal</th>
+  </tr>
+  <tr>
+    <td class="tg-wknv">storagespace</td>
+    <td class="tg-031e"></td>
+    <td class="tg-wknv"><div id="staal" style="width:200px;">90% <a href="#" style="text-decoration:underline;">staal</a></div> <div id="hout">10% <a href="#" style="text-decoration:underline;">hout</a></div></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-wxgh"><!--<div id="specificaties"><a href="#">specificaties</a></div> --></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><div id="tekstwrapperino" style="width:450px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Het ontwerp <i>Fruitschaal</i> is door zijn industriële look en 100% gerecycleerde body zowaar de puurste creatie uit de
+collectie. Ze ontstond uit de idee om de afvalberg van Stuf zo klein mogelijk te houden. Zo wordt er altijd over nagedacht om zelfs resten van herbestemde objecten opnieuw in de collectie te integreren. <br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Als basis voor <i>Fruitschaal</i> werd daarom beslist de ongebruikte onderdelen van afgedankte stalen lijmvaten te gebruiken. Deze lijmvaten dienen tevens als basis voor andere creaties uit de collectie, <u>HOAT</u> &amp; <u>OAT</u>. 
+Terwijl de onderkanten van de lijmvaten in het <i>Krukje</i> worden verwerkt, worden de bovenkanten 180° gedraaid waardoor het gehalveerde vat de functie bekomt van een schaal. De Fruitschaal bestaat in twee versies, een chemisch gezwarte stalen kuip en een ruw witte, beiden met een kleurloze beschermende waslaag.
+<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;De <i>Fruitschaal</i> kan tevens verkregen worden met een deksel. Keuze uit: <u>leisteen</u>, <u>padoek</u> of <u>gerookte eik</u>.</div></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"> <div id="staal_popup" style="width:300px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alle stalen onderdelen van uit onze collectie worden chemisch gezwart. Chemisch zwarten, ook wel bruneren genoemd, is een chemisch proces waarbij het staaloppervlak wordt omgezet in een ijzeroxidelaag. Het proces bestaat eruit het staal onder te dompelen in een oxiderende alkalische vloeistof bestaande uit een mengsel van zouten.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deze toepassing is niet alleen milieuvriendelijk, door de diepzwarte kleur van de ijzeroxidelaag, krijgt het staal ook een unieke uitstraling.<br /><br />
+
+</div>
+<div id="hout_popup" style="width:300px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;De keuze voor eikenhout past volledig binnen de filosofie van stuf. Enerzijds betreft het een lokale, sterke houtsoort die bekend staat om zijn duurzaamheid, anderzijds is het één van de weinige houtsoorten waarop we de techniek van het roken konden toepassen.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Roken biedt het voordeel dat het hout in sneltempo in een natuurlijk verouderingsproces terechtkomt, waardoor verdere veroudering wordt tegengegaan<br /><br />
+<div style="width:300px; height:1px;"></div>
+
+</div></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"><div id="specpopup"><img src="img/TTtest.jpg" style="display:block; height:250px; width:300px;"><br>Ontworpen en gemaakt in België.<br>Kan op maat besteld worden.</div></td>
+  </tr>
+   <tr>
+    <td class="tg-yw4l"><!--leeg --></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"><!--leeg --></td>
+    <td class="tg-yw4l"><!--leeg --></td>
+    <td class="tg-yw4l"><!--leeg --></td>
+  </tr>
+</table>
+          </div>
+          
+            </div>
+          
+     
+
+
+</div>
+<div id="prev_object">
+	 <a href="hoat3.html" class="prev_object">
+ 		<img src="img/arrow.png" style="width:50px; height:50px; display:block;">
+      </a>
+ </div>
+ 
+  <div id="next_object">
+	 <a href="oat.html" class="prev_object">
+ 		<img src="img/arrow2.png" style="width:50px; height:50px; display:block;">
+      </a>
+ </div>
+    <!-- einde .content --></div>
+  <!-- einde .container --></div>
+  <!-- einde wrapperino --></div>
+</body>
+</html>
