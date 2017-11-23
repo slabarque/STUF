@@ -21,8 +21,11 @@
             return decodeURIComponent(results[2].replace(/\+/g, " "));
         }
         $(document).ready(function () {
-            var section = getParameterByName("section");
+            var section = getParameterByName("section");    
             $("#" + section).collapse("show");
+            if(window.innerWidth>768)
+                $("#homeNav").collapse("show");
+
         });
     </script>
 </head>
