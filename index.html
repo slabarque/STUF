@@ -5,12 +5,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>STUF</title>
-  <link rel="stylesheet" href="css\boostrap\css\bootstrap.css">
+  <link rel="stylesheet" href="css\bootstrap\css\bootstrap.css">
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="css\tether\tether.min.js"></script>
+  <script src="css\bootstrap\js\bootstrap.min.js"></script>
   <script>
     $(document).ready(
+
       function () {
+        $(".hover-img").hide();
+        $(".hover-img").prev().hover(e=> e.currentTarget.nextSibling().show());
+        var t = new Tether({
+          element: $("#oatImg"),
+          target: $("#oatLink"),
+          attachment: 'top right',
+          targetAttachment: 'top left',
+          offset: '0 10px'
+        });
+
         $("#verhalenpopup").hide();
         $("#conceptenpopup").hide();
         $("#contactpopup").hide();
@@ -33,221 +46,170 @@
 <body>
   <div class="wrapper">
     <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-4 col-md-12">
-            <section id="sidebar1">
-              <ul class="navSTUF">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+          <section id="sidebar1">
+            <ul class="navSTUF">
+              <li>
+                <a href="index.html">
+                  <u>objecten</u>
+                </a>
+              </li>
+              <div id="concepten" class="hider">
                 <li>
-                  <a href="index.html">
-                    <u>objecten</u>
-                  </a>
+                  <a href="#" class="toggle">concept</a>
                 </li>
-                <div id="concepten" class="hider">
-                  <li>
-                    <a href="#" class="toggle">concept</a>
-                  </li>
-                </div>
-                <div id="verhalen" class="hider">
-                  <li>
-                    <a href="#" class="toggle">verhalen</a>
-                  </li>
-                </div>
-                <div id="contact" class="hider">
-                  <li>
-                    <a href="#" class="toggle">contact</a>
-                  </li>
-                </div>
-
-
-              </ul>
-              <p>&nbsp;</p>
-            </section>
-            <section id="conceptenpopup">
-              <p class="concepten">Stuf is een jong, Belgisch designlabel dat stijlvol meubilair en originele interieuraccessoires brengt. Maar
-                bovenal is stuf het verhaal van twee enthousiastelingen in hun zoektocht naar een creatieve uitlaatklep.
-                <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bij stuf betekent creativiteit potentieel zien in al wat zich
-                rondom ons bevindt. Ruwe materialen, afgedankte objecten en restmateriaal, door met een onbevooroordeelde
-                blik naar de wereld te kijken, kan bij Stuf alles een poort zijn naar een nieuwe creatie.
-                <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Daarom staat bij stuf ook vooral het experiment centraal: schoonheden
-                en gebreken van materialen worden eigenhandig ontdekt door middel van veelvuldig en herhaaldelijk experiment.
-                Bovendien wordt dat alles verwezenlijkt zonder het ecologische aspect uit het oog te verliezen.
-                <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zo wordt steevast getracht materiaalverlies, zowel als materiaalgebruik,
-                tot een minimum te herleiden. Elk object wordt dan ook teruggebracht naar de essentie, wat resulteert in
-                eerlijke, elegante en sobere creaties.
-                <br />
-
-              </p>
-
-            </section>
-          </div>
-          <div class="col-lg-4 col-md-12">
-            <section id="headtitle">
-              <a href="index.html">
-                <img src="img/stuflogo.jpg" / width="220px" height="150px" style="display:block;">
-              </a>
-            </section>
-            <section id="products">
-              <ul class="product">
+              </div>
+              <div id="verhalen" class="hider">
                 <li>
-                  <a href="oat.html">
-                    <p class="oat">OAT
-                      <img class="product-img" src="img/object/OAT/HOVERBEELD/OAT_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
-                    </p>
-                  </a>
+                  <a href="#" class="toggle">verhalen</a>
                 </li>
-
+              </div>
+              <div id="contact" class="hider">
                 <li>
-                  <a href="hoat1.html">
-                    <p class="hoat1">HOAT 1.0
-                      <img class="product-img" src="img/object/HOAT 1/HOVERBEELD/HOAT1_HOVERBEELD.jpg" / onload="this.width/=2;this.onload=null;">
-                    </p>
-                  </a>
+                  <a href="#" class="toggle">contact</a>
                 </li>
+              </div>
 
-                <li>
-                  <a href="kleerstaander.html">
-                    <p class="kleerstaander">kleerstaander
-                      <img class="product-img" src="img/object/KLEERHANGER/HOVERBEELD/KLEERHANGER_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
-                    </p>
-                  </a>
-                </li>
 
-                <li>
-                  <a href="hoat2.html">
-                    <p class="hoat2">HOAT 2.0
-                      <img class="product-img" src="img/object/HOAT 2/HOVERBEELD/HOAT2_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
-                    </p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="hoat3.html">
-                    <p class="hoat3">HOAT 3.0
-                      <img class="product-img" src="img/object/HOAT 3/HOVERBEELD/HOAT3_HOVERBEELD.jpg" / onload="this.width/=2;this.onload=null;">
-                    </p>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="fruitschaal.html">
-                    <p class="fruitschaal">fruitschaal
-                      <img class="product-img" src="img/object/FRUITSCHAAL/HOVERBEELD/FRUITSCHAAL_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
-                    </p>
-                  </a>
-                </li>
-              </ul>
-          </div>
+            </ul>
+            <p>&nbsp;</p>
           </section>
-          <div class="col-lg-4 col-md-12">
-            <section id="verhalenpopup">
+          <section id="conceptenpopup">
+            <p class="concepten">Stuf is een jong, Belgisch designlabel dat stijlvol meubilair en originele interieuraccessoires brengt. Maar
+              bovenal is stuf het verhaal van twee enthousiastelingen in hun zoektocht naar een creatieve uitlaatklep.
+              <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bij stuf betekent creativiteit potentieel zien in al wat zich rondom
+              ons bevindt. Ruwe materialen, afgedankte objecten en restmateriaal, door met een onbevooroordeelde blik naar
+              de wereld te kijken, kan bij Stuf alles een poort zijn naar een nieuwe creatie.
+              <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Daarom staat bij stuf ook vooral het experiment centraal: schoonheden
+              en gebreken van materialen worden eigenhandig ontdekt door middel van veelvuldig en herhaaldelijk experiment.
+              Bovendien wordt dat alles verwezenlijkt zonder het ecologische aspect uit het oog te verliezen.
+              <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zo wordt steevast getracht materiaalverlies, zowel als materiaalgebruik,
+              tot een minimum te herleiden. Elk object wordt dan ook teruggebracht naar de essentie, wat resulteert in eerlijke,
+              elegante en sobere creaties.
+              <br />
 
+            </p>
 
-              <p class="title1">Windows of Opportunity</p>
-
-              <p class="date">8/9/2017</p>
-
-              <p class="post">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stuf is geselecteerd om deel te nemen aan de tweede editie van Windows of Opportunity,
-                een designevenement georganiseerd door Flanders DC in het kader van Design September.
-                <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vanaf vandaag valt een deel van onze collectie dan ook te bewonderen
-                in één van grote etalageramen in de Brusselse Kanselarijstraat. De objecten die aan de voorbijgangers worden
-                voorgesteld zijn het Kledingrek en het Krukje. Wilt u ook eens windowshoppen en een kijkje nemen in onze
-                collectie? Dat kan nog tot en met 1 oktober 2017!
-                <br />
-                <br />
-
-                <a href="https://www.flandersdc.be/nl/magazine/windows-of-opportunity-jong-designtalent-geetaleerd" target="_blank">Meer info over Windows of Opportunity </a>
-
-                <br />
-                <br />
-                <br />
-
-
-              </p>
-            </section>
-          </div>
+          </section>
         </div>
-        <div id="contactpopup" class="row">
-          <div class="col-md-2 col-sm-12 mr-auto">
-            <p>
-              <span class="tg-contact">info@stuf.be</span>
-              <br>
-              <br>
-              <br>
-              <a href="https://www.facebook.com/Stuf-422311558099917/" target="_blank">
-                <img src="img/fb.jpg">
-              </a>
-              <a href="https://www.instagram.com/jielt/" target="_blank">
-                <img src="img/ig.jpg">
-              </a>
-            </p>
-          </div>
-          <div class="col-md-2  col-sm-12 mr-auto">
-            <p>
-              <span class="tg-contact">Jielt Gregoire</span>
-              <br>ontwerpt stuf
-              <br>jielt@stuf.be
-              <br>+32 479 384 246
-            </p>
-          </div>
-          <div class="col-md-2  col-sm-12 ">
-            <p>
-              <span class="tg-contact">Jonas Deketelaere</span>
-              <br>maakt stuf
-              <br>jonas@stuf.be
-              <br>+32 476 360 094
-            </p>
-          </div>
-          <!-- <p class="contact">
-              <table class="tg">
-                <tr>
-                  <th class="tg-contact">info@stuf.be
-                    <br />
-                    <a href="https://www.facebook.com/Stuf-422311558099917/" target="_blank">
-                      <img src="img/fb.jpg" class="contactlogo">
-                    </a>
-                    <a href="https://www.instagram.com/jielt/" target="_blank">
-                      <img src="img/ig.jpg" class="contactlogo2">
-                    </a>
+        <div class="col-lg-4 col-md-12 text-center">
+          <section id="headtitle">
+            <a href="index.html" class="mx-auto d-block">
+              <img src="img/stuflogo.jpg" width="220px" height="150px">
+            </a>
+          </section>
+          <section id="products">
+            <ul class="product">
+              <li>
+                <a href="oat.html" id="oatLink">OAT</a>
+                <img class="hover-img" id="oatImg" src="img/object/OAT/HOVERBEELD/OAT_HOVERBEELD.jpg">
+              </li>
 
-                  </th>
-                  <th class="tg-leftspace"> </th>
-                  <th class="tg-contact">Jielt Gregoire
-                    <br>ontwerpt stuf
-                    <br>jielt@stuf.be
-                    <br>+32 479 384 246</th>
-                  <th class="tg-midspace"> </th>
-                  <th class="tg-contact">Jonas Deketelaere
-                    <br>maakt stuf
-                    <br>jonas@stuf.be
-                    <br>+32 476 360 094</th>
-                  <th class="tg-leesmeerspace"> </th>
-                  <th class="tg-leesmeer">
-                    <br />
-                    <br />
+              <li>
+                <a href="hoat1.html">
+                  <p class="hoat1">HOAT 1.0
+                    <img class="product-img" src="img/object/HOAT 1/HOVERBEELD/HOAT1_HOVERBEELD.jpg" / onload="this.width/=2;this.onload=null;">
+                  </p>
+                </a>
+              </li>
 
-                  </th>
-                  <th class="tg-xspace">
-                    <div id="contact2">
-                      <a href="#">
-                        <img src="img/x.png">
-                      </a>
-                    </div>
-                    <th class="tg-x"></th>
-                </tr>
+              <li>
+                <a href="kleerstaander.html">
+                  <p class="kleerstaander">kleerstaander
+                    <img class="product-img" src="img/object/KLEERHANGER/HOVERBEELD/KLEERHANGER_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
+                  </p>
+                </a>
+              </li>
 
-              </table>
+              <li>
+                <a href="hoat2.html">
+                  <p class="hoat2">HOAT 2.0
+                    <img class="product-img" src="img/object/HOAT 2/HOVERBEELD/HOAT2_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a href="hoat3.html">
+                  <p class="hoat3">HOAT 3.0
+                    <img class="product-img" src="img/object/HOAT 3/HOVERBEELD/HOAT3_HOVERBEELD.jpg" / onload="this.width/=2;this.onload=null;">
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a href="fruitschaal.html">
+                  <p class="fruitschaal">fruitschaal
+                    <img class="product-img" src="img/object/FRUITSCHAAL/HOVERBEELD/FRUITSCHAAL_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
+                  </p>
+                </a>
+              </li>
+            </ul>
+        </div>
+        </section>
+        <div class="col-lg-4 col-md-12">
+          <section id="verhalenpopup">
+
+
+            <p class="title1">Windows of Opportunity</p>
+
+            <p class="date">8/9/2017</p>
+
+            <p class="post">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stuf is geselecteerd om deel te nemen aan de tweede editie van Windows of Opportunity,
+              een designevenement georganiseerd door Flanders DC in het kader van Design September.
+              <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vanaf vandaag valt een deel van onze collectie dan ook te bewonderen
+              in één van grote etalageramen in de Brusselse Kanselarijstraat. De objecten die aan de voorbijgangers worden
+              voorgesteld zijn het Kledingrek en het Krukje. Wilt u ook eens windowshoppen en een kijkje nemen in onze collectie?
+              Dat kan nog tot en met 1 oktober 2017!
               <br />
               <br />
 
-            </p> -->
+              <a href="https://www.flandersdc.be/nl/magazine/windows-of-opportunity-jong-designtalent-geetaleerd" target="_blank">Meer info over Windows of Opportunity </a>
 
+              <br />
+              <br />
+              <br />
+
+
+            </p>
+          </section>
         </div>
-        <!-- einde .content -->
       </div>
-      <!-- einde .container -->
+      <div id="contactpopup" class="row">
+        <div class="col-md-2 col-sm-12 mr-auto">
+          <p>
+            <span class="tg-contact">info@stuf.be</span>
+            <br>
+            <br>
+            <br>
+            <a href="https://www.facebook.com/Stuf-422311558099917/" target="_blank">
+              <img src="img/fb.jpg">
+            </a>
+            <a href="https://www.instagram.com/jielt/" target="_blank">
+              <img src="img/ig.jpg">
+            </a>
+          </p>
+        </div>
+        <div class="col-md-2  col-sm-12 mr-auto">
+          <p>
+            <span class="tg-contact">Jielt Gregoire</span>
+            <br>ontwerpt stuf
+            <br>jielt@stuf.be
+            <br>+32 479 384 246
+          </p>
+        </div>
+        <div class="col-md-2  col-sm-12 ">
+          <p>
+            <span class="tg-contact">Jonas Deketelaere</span>
+            <br>maakt stuf
+            <br>jonas@stuf.be
+            <br>+32 476 360 094
+          </p>
+        </div>
+      </div>
     </div>
-    <!-- einde wrapperino -->
   </div>
 </body>
 

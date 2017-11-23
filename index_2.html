@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="ISO-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STUF</title>
+    <link rel="stylesheet" href="css\bootstrap\css\bootstrap.css">
+    <link href="css/style2.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="css\bootstrap\js\bootstrap.min.js"></script>
+    <script language="javascript">
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        $(document).ready(function () {
+            var section = getParameterByName("section");
+            $("#"+section).removeClass("collapse").addClass("collape.show");
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <section id="homeNav">
+                    <ul>
+                        <li>
+                            <a href="index.html"><u>objecten</u></a>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#concept" aria-expanded="false" aria-controls="concept">concept</a>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#verhalen" aria-expanded="false" aria-controls="verhalen">verhalen</a>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#contactDiv" aria-expanded="false" aria-controls="contactDiv">contact</a>
+                        </li>
+                    </ul>
+                </section>
+                <section id="concept" class="collapse">
+                    <p>
+                        Stuf is een jong, Belgisch designlabel dat stijlvol meubilair en originele interieuraccessoires brengt.
+                        Maar bovenal is stuf het verhaal van twee enthousiastelingen in hun zoektocht naar een creatieve
+                        uitlaatklep.
+                    </p>
+                    <p>
+                        Bij stuf betekent creativiteit potentieel zien in al wat zich rondom ons bevindt. Ruwe materialen, afgedankte
+                        objecten en restmateriaal, door met een onbevooroordeelde blik naar de wereld te kijken, kan bij
+                        Stuf alles een poort zijn naar een nieuwe creatie.
+                    </p>
+                    <p>
+                        Daarom staat bij stuf ook vooral het experiment centraal: schoonheden en gebreken van materialen worden
+                        eigenhandig ontdekt door middel van veelvuldig en herhaaldelijk experiment. Bovendien wordt dat alles
+                        verwezenlijkt zonder het ecologische aspect uit het oog te verliezen.
+                    </p>
+                    <p>
+                        Zo wordt steevast getracht materiaalverlies, zowel als materiaalgebruik, tot een minimum te herleiden.
+                        Elk object wordt dan ook teruggebracht naar de essentie, wat resulteert in eerlijke, elegante en
+                        sobere creaties.
+                    </p>
+                </section>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div id="logoDiv">
+                    <img src="img/stuflogo.jpg">
+                </div>
+                <section id="productNav">
+                    <ul>
+                        <li>
+                            <a href="oat_2.html">OAT</a>
+                        </li>
+
+                        <li>
+                            <a href="hoat1_2.html">HOAT 1.0</a>
+                        </li>
+
+                        <li>
+                            <a href="kleerstaander_2.html">kleerstaander</a>
+                        </li>
+
+                        <li>
+                            <a href="hoat2_2.html">HOAT 2.0</a>
+                        </li>
+
+                        <li>
+                            <a href="hoat3_2.html">HOAT 3.0</a>
+                        </li>
+
+                        <li>
+                            <a href="fruitschaal_2.html">fruitschaal</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="col-lg-4 col-md-12 scrollable">
+                <section id="verhalen" class="collapse">
+                    <h2>Windows of Opportunity</h2>
+
+                    <span>8/9/2017</span>
+
+                    <p>
+                        stuf is geselecteerd om deel te nemen aan de tweede editie van Windows of Opportunity, een designevenement
+                        georganiseerd door Flanders DC in het kader van Design September.
+                    </p>
+                    <p>
+                        Vanaf vandaag valt een deel van onze collectie dan ook te bewonderen in één van grote etalageramen in de
+                        Brusselse Kanselarijstraat. De objecten die aan de voorbijgangers worden voorgesteld zijn het Kledingrek
+                        en het Krukje. Wilt u ook eens windowshoppen en een kijkje nemen in onze collectie? Dat kan nog tot en
+                        met 1 oktober 2017!
+                    </p>
+                    <h2>The Cosmos Awaits</h2>
+
+                    <span>22/11/2017</span>
+
+                    <p>
+                        Rogue. Muse about, worldlets stirred by starlight dispassionate extraterrestrial observer the ash of stellar alchemy, great turbulent clouds explorations white dwarf rogue rings of Uranus, cosmos light years made in the interiors of collapsing stars. Encyclopaedia galactica, the sky calls to us globular star cluster colonies galaxies, Cambrian explosion realm of the galaxies! Euclid, take root and flourish galaxies a very small stage in a vast cosmic arena. Tesseract, Tunguska event. Encyclopaedia galactica and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+                    </p>
+                    <h2>Yar Pirate Ipsum</h2>
+
+                    <span>8/9/2017</span>
+
+                    <p>
+                        Poop deck transom bilge rat boatswain grapple me clipper grog blossom topsail killick. Pirate Round interloper knave hempen halter splice the main brace Sail ho lugger boatswain no prey, no pay bowsprit. Run a rig stern jolly boat brigantine avast barque fluke snow furl fathom.
+                    </p>
+                    <p>
+                        Pirate hang the jib walk the plank Spanish Main sutler smartly hearties hornswaggle Jack Ketch gally. Bounty Davy Jones' Locker careen Chain Shot me long clothes fluke Gold Road hempen halter code of conduct. Chain Shot holystone to go on account crow's nest Corsair Buccaneer line plunder lee aft.
+                    </p>
+                    <p>
+                        Jib chase guns Arr sheet mutiny topgallant come about long boat run a rig Pieces of Eight. Belay lateen sail sheet ahoy log Letter of Marque brigantine bring a spring upon her cable gibbet hail-shot. Deadlights run a rig holystone Buccaneer come about shrouds Pieces of Eight bilge rat bilged on her anchor Sea Legs.
+                    </p>
+                </section>
+
+            </div>
+        </div>
+
+        <div id="contactDiv" class="collapse">
+            <hr />
+            <div class="row">
+                <div class="col-lg-2  mr-auto col-md-3 col-sm-4">
+                    <p>info@stuf.be</p>
+                    <a href="https://www.facebook.com/Stuf-422311558099917/" target="_blank">
+                        <img src="img/fb.jpg" class="contactlogo">
+                    </a>
+                    <a href="https://www.instagram.com/jielt/" target="_blank">
+                        <img src="img/ig.jpg" class="contactlogo2">
+                    </a>
+                </div>
+                <div class="col-lg-2 mr-auto col-md-3 col-sm-4">
+                    <p>Jielt Gregoire</p>
+                    <p>ontwerpt stuf</p>
+                    <p>jielt@stuf.be</p>
+                    <p>+32 479 384 246</p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <p>Jonas Deketelaere</p>
+                    <p>maakt stuf</p>
+                    <p>jonas@stuf.be</p>
+                    <p>+32 476 360 094</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
