@@ -21,7 +21,7 @@
         }
         $(document).ready(function () {
             var section = getParameterByName("section");
-            $("#"+section).removeClass("collapse").addClass("collape.show");
+            $("#" + section).collapse("show");
         });
     </script>
 </head>
@@ -76,33 +76,51 @@
                 <section id="productNav">
                     <ul>
                         <li>
-                            <a href="oat_2.html">OAT</a>
+                            <a href="oat_2.html">
+                                <span>OAT</span>
+                                <img src="img/object/OAT/HOVERBEELD/OAT_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
                         </li>
 
                         <li>
-                            <a href="hoat1_2.html">HOAT 1.0</a>
+                            <a href="hoat1_2.html">
+                                <span>HOAT 1.0</span>
+                                <img src="img/object/HOAT 1/HOVERBEELD/HOAT1_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
                         </li>
 
                         <li>
-                            <a href="kleerstaander_2.html">kleerstaander</a>
+                            <a href="kleerstaander_2.html">
+                                <span>kleerstaander</span>
+                                <img src="img/object/KLEERHANGER/HOVERBEELD/KLEERHANGER_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
                         </li>
 
                         <li>
-                            <a href="hoat2_2.html">HOAT 2.0</a>
+                            <a href="hoat2_2.html">
+                                <span>HOAT 2.0</span>
+                                <img src="img/object/HOAT 2/HOVERBEELD/HOAT2_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
                         </li>
 
                         <li>
-                            <a href="hoat3_2.html">HOAT 3.0</a>
+                            <a href="hoat3_2.html">
+                                <span>HOAT 3.0</span>
+                                <img src="img/object/HOAT 3/HOVERBEELD/HOAT3_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
                         </li>
 
                         <li>
-                            <a href="fruitschaal_2.html">fruitschaal</a>
+                            <a href="fruitschaal_2.html">
+                                <span>fruitschaal</span>
+                                <img src="img/object/fruitschaal/HOVERBEELD/fruitschaal_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
                         </li>
                     </ul>
                 </section>
             </div>
 
-            <div class="col-lg-4 col-md-12 scrollable">
+            <div class="col-lg-4 col-md-12">
                 <section id="verhalen" class="collapse">
                     <h2>Windows of Opportunity</h2>
 
@@ -142,11 +160,10 @@
 
             </div>
         </div>
-
         <div id="contactDiv" class="collapse">
             <hr />
-            <div class="row">
-                <div class="col-lg-2  mr-auto col-md-3 col-sm-4">
+            <div class="row justify-content-between">
+                <div class="col-lg-2 col-md-3 col-sm-4">
                     <p>info@stuf.be</p>
                     <a href="https://www.facebook.com/Stuf-422311558099917/" target="_blank">
                         <img src="img/fb.jpg" class="contactlogo">
@@ -155,7 +172,7 @@
                         <img src="img/ig.jpg" class="contactlogo2">
                     </a>
                 </div>
-                <div class="col-lg-2 mr-auto col-md-3 col-sm-4">
+                <div class="col-lg-2 col-md-3 col-sm-4">
                     <p>Jielt Gregoire</p>
                     <p>ontwerpt stuf</p>
                     <p>jielt@stuf.be</p>
