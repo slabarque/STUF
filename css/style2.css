@@ -87,16 +87,11 @@ div.verhaal:not(:first-child) {
         margin: 0px;
     }
 
-#homeNav.collapse.show {
-    display: block !important;
-}
-
-#homeNav.collapsing{
-    display: block !important;
-}
 
 #homeNav {
     font-size: 3em;
+    margin-right: auto;
+    margin-left: auto;
 }
 
     #homeNav ul {
@@ -149,6 +144,10 @@ div.verhaal:not(:first-child) {
 
 /*bootstrap overrides*/
 
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+}
 
 .carousel-control-prev:hover {
     color: #000;
