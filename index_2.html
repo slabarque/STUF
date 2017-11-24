@@ -23,9 +23,12 @@
         $(document).ready(function () {
             var section = getParameterByName("section");    
             $("#" + section).collapse("show");
-            if(window.innerWidth>768)
+            if(window.innerWidth>=576)
                 $("#homeNav").collapse("show");
+            else
+                $("#homeNav").collapse("hide");
 
+            $(".collapse").collapse()
         });
     </script>
 </head>
@@ -34,14 +37,14 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <a id="logoDiv" data-toggle="collapse" href="#homeNav" aria-expanded="true" aria-controls="homeNav">
+                <a id="logoDiv" data-toggle="collapse" href="#homeNav" aria-expanded="false" aria-controls="homeNav">
                     <img src="img/stuflogo.jpg">
                 </a>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-12">
-                <section id="homeNav" class="hidden-xs-down collapse.show">
+            <div class="col-lg-4 col-md-12"  align="center">
+                <section id="homeNav" class="collapse">
                     <ul>
                         <li>
                             <a href="index_2.html"><u>objecten</u></a>
@@ -57,7 +60,7 @@
                         </li>
                     </ul>
                 </section>
-                <section id="concept" class="collapse">
+                <section id="concept" class="collapse" align="left">
                     <p>
                         Stuf is een jong, Belgisch designlabel dat stijlvol meubilair en originele interieuraccessoires brengt.
                         Maar bovenal is stuf het verhaal van twee enthousiastelingen in hun zoektocht naar een creatieve
