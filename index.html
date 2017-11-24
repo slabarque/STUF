@@ -1,216 +1,245 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="nl">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STUF</title>
-  <link rel="stylesheet" href="css\bootstrap\css\bootstrap.css">
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="css\tether\tether.min.js"></script>
-  <script src="css\bootstrap\js\bootstrap.min.js"></script>
-  <script>
-    $(document).ready(
+    <meta charset="ISO-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STUF</title>
+    <link rel="stylesheet" href="css\bootstrap\css\bootstrap.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="css\tether\tether.js"></script>
+    <script src="css\bootstrap\js\bootstrap.js"></script>
+    <script language="javascript">
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        $(document).ready(function () {
+            var smallscreensize = 576;
 
-      function () {
-        $(".hover-img").hide();
-        $(".hover-img").prev().hover(e=> e.currentTarget.nextSibling().show());
-        var t = new Tether({
-          element: $("#oatImg"),
-          target: $("#oatLink"),
-          attachment: 'top right',
-          targetAttachment: 'top left',
-          offset: '0 10px'
+            //productNav shown on initial load
+            $("#productNav").collapse("show");
+
+            //custom section can be shown on initial load if specified in querystring
+            var section = getParameterByName("section");    
+            $("#" + section).collapse("show");
+
+            //homeNav shown on initial load for non-small screens
+            if (window.innerWidth >= smallscreensize)
+                $("#homeNav").collapse("show");
+            else
+                $("#homeNav").collapse("hide");
+
+            //showing collapseable content on small screen hides other collapseable content
+            $("#concept").on("show.bs.collapse", function () {
+                if (window.innerWidth < smallscreensize) {
+                    $("#verhalen").collapse("hide");
+                    $("#productNav").collapse("hide");
+                    $("#contactDiv").collapse("hide");
+                }
+            });
+            $("#verhalen").on("show.bs.collapse", function () {
+                if (window.innerWidth < smallscreensize) {
+                    $("#concept").collapse("hide");
+                    $("#productNav").collapse("hide");
+                    $("#contactDiv").collapse("hide");
+                }
+            });
+            $("#productNav").on("show.bs.collapse", function () {
+                if (window.innerWidth < smallscreensize) {
+                    $("#concept").collapse("hide");
+                    $("#verhalen").collapse("hide");
+                    $("#contactDiv").collapse("hide");
+                }
+            });
+            $("#contactDiv").on("show.bs.collapse", function () {
+                if (window.innerWidth < smallscreensize) {
+                    $("#concept").collapse("hide");
+                    $("#verhalen").collapse("hide");
+                    $("#productNav").collapse("hide");
+                }
+            });
         });
 
-        $("#verhalenpopup").hide();
-        $("#conceptenpopup").hide();
-        $("#contactpopup").hide();
-        $("#verhalen").click(function () {
-          $("#verhalenpopup").toggle();
-        });
-        $("#concepten").click(function () {
-          $("#conceptenpopup").toggle();
-        });
-        $("#contact").click(function () {
-          $("#contactpopup").toggle();
-        });
-        $(".toggle").click(function () {
-          $(this).parent().toggleClass("hider shower")
-        });
-      });
-  </script>
+    </script>
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-4 col-md-12">
-          <section id="sidebar1">
-            <ul class="navSTUF">
-              <li>
-                <a href="index.html">
-                  <u>objecten</u>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <a id="logoDiv" data-toggle="collapse" href="#homeNav" aria-expanded="false" aria-controls="homeNav">
+                    <img src="img/stuflogo.jpg">
                 </a>
-              </li>
-              <div id="concepten" class="hider">
-                <li>
-                  <a href="#" class="toggle">concept</a>
-                </li>
-              </div>
-              <div id="verhalen" class="hider">
-                <li>
-                  <a href="#" class="toggle">verhalen</a>
-                </li>
-              </div>
-              <div id="contact" class="hider">
-                <li>
-                  <a href="#" class="toggle">contact</a>
-                </li>
-              </div>
-
-
-            </ul>
-            <p>&nbsp;</p>
-          </section>
-          <section id="conceptenpopup">
-            <p class="concepten">Stuf is een jong, Belgisch designlabel dat stijlvol meubilair en originele interieuraccessoires brengt. Maar
-              bovenal is stuf het verhaal van twee enthousiastelingen in hun zoektocht naar een creatieve uitlaatklep.
-              <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bij stuf betekent creativiteit potentieel zien in al wat zich rondom
-              ons bevindt. Ruwe materialen, afgedankte objecten en restmateriaal, door met een onbevooroordeelde blik naar
-              de wereld te kijken, kan bij Stuf alles een poort zijn naar een nieuwe creatie.
-              <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Daarom staat bij stuf ook vooral het experiment centraal: schoonheden
-              en gebreken van materialen worden eigenhandig ontdekt door middel van veelvuldig en herhaaldelijk experiment.
-              Bovendien wordt dat alles verwezenlijkt zonder het ecologische aspect uit het oog te verliezen.
-              <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zo wordt steevast getracht materiaalverlies, zowel als materiaalgebruik,
-              tot een minimum te herleiden. Elk object wordt dan ook teruggebracht naar de essentie, wat resulteert in eerlijke,
-              elegante en sobere creaties.
-              <br />
-
-            </p>
-
-          </section>
+            </div>
         </div>
-        <div class="col-lg-4 col-md-12 text-center">
-          <section id="headtitle">
-            <a href="index.html" class="mx-auto d-block">
-              <img src="img/stuflogo.jpg" width="220px" height="150px">
-            </a>
-          </section>
-          <section id="products">
-            <ul class="product">
-              <li>
-                <a href="oat.html" id="oatLink">OAT</a>
-                <img class="hover-img" id="oatImg" src="img/object/OAT/HOVERBEELD/OAT_HOVERBEELD.jpg">
-              </li>
+        <div class="row">
+            <div class="col-lg-4 col-md-12"  align="center">
+                <section id="homeNav" class="collapse">
+                    <ul>
+                        <li>
+                            <a  data-toggle="collapse" href="#productNav" aria-expanded="false" aria-controls="productNav">objecten</a>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#concept" aria-expanded="false" aria-controls="concept">concept</a>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#verhalen" aria-expanded="false" aria-controls="verhalen">verhalen</a>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" href="#contactDiv" aria-expanded="false" aria-controls="contactDiv">contact</a>
+                        </li>
+                    </ul>
+                </section>
+                <section id="concept" class="collapse" align="left">
+                    <p>
+                        Stuf is een jong, Belgisch designlabel dat stijlvol meubilair en originele interieuraccessoires brengt.
+                        Maar bovenal is stuf het verhaal van twee enthousiastelingen in hun zoektocht naar een creatieve
+                        uitlaatklep.
+                    </p>
+                    <p>
+                        Bij stuf betekent creativiteit potentieel zien in al wat zich rondom ons bevindt. Ruwe materialen, afgedankte
+                        objecten en restmateriaal, door met een onbevooroordeelde blik naar de wereld te kijken, kan bij
+                        Stuf alles een poort zijn naar een nieuwe creatie.
+                    </p>
+                    <p>
+                        Daarom staat bij stuf ook vooral het experiment centraal: schoonheden en gebreken van materialen worden
+                        eigenhandig ontdekt door middel van veelvuldig en herhaaldelijk experiment. Bovendien wordt dat alles
+                        verwezenlijkt zonder het ecologische aspect uit het oog te verliezen.
+                    </p>
+                    <p>
+                        Zo wordt steevast getracht materiaalverlies, zowel als materiaalgebruik, tot een minimum te herleiden.
+                        Elk object wordt dan ook teruggebracht naar de essentie, wat resulteert in eerlijke, elegante en
+                        sobere creaties.
+                    </p>
+                </section>
+            </div>
+            <div class="col-lg-4 col-md-12 push-lg-4">
+                <section id="verhalen" class="collapse">
+                    <div class="verhaal">
+                        <h2>Windows of Opportunity</h2>
 
-              <li>
-                <a href="hoat1.html">
-                  <p class="hoat1">HOAT 1.0
-                    <img class="product-img" src="img/object/HOAT 1/HOVERBEELD/HOAT1_HOVERBEELD.jpg" / onload="this.width/=2;this.onload=null;">
-                  </p>
-                </a>
-              </li>
+                        <span>8/9/2017</span>
 
-              <li>
-                <a href="kleerstaander.html">
-                  <p class="kleerstaander">kleerstaander
-                    <img class="product-img" src="img/object/KLEERHANGER/HOVERBEELD/KLEERHANGER_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
-                  </p>
-                </a>
-              </li>
+                        <p>
+                            stuf is geselecteerd om deel te nemen aan de tweede editie van Windows of Opportunity, een designevenement
+                            georganiseerd door Flanders DC in het kader van Design September.
+                        </p>
+                        <p>
+                            Vanaf vandaag valt een deel van onze collectie dan ook te bewonderen in één van grote etalageramen in de
+                            Brusselse Kanselarijstraat. De objecten die aan de voorbijgangers worden voorgesteld zijn het Kledingrek
+                            en het Krukje. Wilt u ook eens windowshoppen en een kijkje nemen in onze collectie? Dat kan nog tot en
+                            met 1 oktober 2017!
+                        </p>
+                    </div>
+                    <div class="verhaal">
+                        <h2>The Cosmos Awaits</h2>
 
-              <li>
-                <a href="hoat2.html">
-                  <p class="hoat2">HOAT 2.0
-                    <img class="product-img" src="img/object/HOAT 2/HOVERBEELD/HOAT2_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
-                  </p>
-                </a>
-              </li>
+                        <span>22/11/2017</span>
 
-              <li>
-                <a href="hoat3.html">
-                  <p class="hoat3">HOAT 3.0
-                    <img class="product-img" src="img/object/HOAT 3/HOVERBEELD/HOAT3_HOVERBEELD.jpg" / onload="this.width/=2;this.onload=null;">
-                  </p>
-                </a>
-              </li>
+                        <p>
+                            Rogue. Muse about, worldlets stirred by starlight dispassionate extraterrestrial observer the ash of stellar alchemy, great turbulent clouds explorations white dwarf rogue rings of Uranus, cosmos light years made in the interiors of collapsing stars. Encyclopaedia galactica, the sky calls to us globular star cluster colonies galaxies, Cambrian explosion realm of the galaxies! Euclid, take root and flourish galaxies a very small stage in a vast cosmic arena. Tesseract, Tunguska event. Encyclopaedia galactica and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+                        </p>
+                    </div>
+                    <div class="verhaal">
+                        <h2>Yar Pirate Ipsum</h2>
 
-              <li>
-                <a href="fruitschaal.html">
-                  <p class="fruitschaal">fruitschaal
-                    <img class="product-img" src="img/object/FRUITSCHAAL/HOVERBEELD/FRUITSCHAAL_HOVERBEELD.jpg" / onload="this.width/=3;this.onload=null;">
-                  </p>
-                </a>
-              </li>
-            </ul>
+                        <span>8/9/2017</span>
+
+                        <p>
+                            Poop deck transom bilge rat boatswain grapple me clipper grog blossom topsail killick. Pirate Round interloper knave hempen halter splice the main brace Sail ho lugger boatswain no prey, no pay bowsprit. Run a rig stern jolly boat brigantine avast barque fluke snow furl fathom.
+                        </p>
+                        <p>
+                            Pirate hang the jib walk the plank Spanish Main sutler smartly hearties hornswaggle Jack Ketch gally. Bounty Davy Jones' Locker careen Chain Shot me long clothes fluke Gold Road hempen halter code of conduct. Chain Shot holystone to go on account crow's nest Corsair Buccaneer line plunder lee aft.
+                        </p>
+                        <p>
+                            Jib chase guns Arr sheet mutiny topgallant come about long boat run a rig Pieces of Eight. Belay lateen sail sheet ahoy log Letter of Marque brigantine bring a spring upon her cable gibbet hail-shot. Deadlights run a rig holystone Buccaneer come about shrouds Pieces of Eight bilge rat bilged on her anchor Sea Legs.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-4 col-md-12 pull-lg-4">
+                <section id="productNav" class="collapse">
+                    <ul>
+                        <li>
+                            <a href="oat.html">
+                                <span>OAT</span>
+                                <img src="img/object/OAT/HOVERBEELD/OAT_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="hoat1.html">
+                                <span>HOAT 1.0</span>
+                                <img src="img/object/HOAT 1/HOVERBEELD/HOAT1_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="kleerstaander.html">
+                                <span>kleerstaander</span>
+                                <img src="img/object/KLEERHANGER/HOVERBEELD/KLEERHANGER_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="hoat2.html">
+                                <span>HOAT 2.0</span>
+                                <img src="img/object/HOAT 2/HOVERBEELD/HOAT2_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="hoat3.html">
+                                <span>HOAT 3.0</span>
+                                <img src="img/object/HOAT 3/HOVERBEELD/HOAT3_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fruitschaal.html">
+                                <span>fruitschaal</span>
+                                <img src="img/object/fruitschaal/HOVERBEELD/fruitschaal_HOVERBEELD.jpg" class="img-fluid hidden-md-up" />
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            
         </div>
-        </section>
-        <div class="col-lg-4 col-md-12">
-          <section id="verhalenpopup">
-
-
-            <p class="title1">Windows of Opportunity</p>
-
-            <p class="date">8/9/2017</p>
-
-            <p class="post">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stuf is geselecteerd om deel te nemen aan de tweede editie van Windows of Opportunity,
-              een designevenement georganiseerd door Flanders DC in het kader van Design September.
-              <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vanaf vandaag valt een deel van onze collectie dan ook te bewonderen
-              in één van grote etalageramen in de Brusselse Kanselarijstraat. De objecten die aan de voorbijgangers worden
-              voorgesteld zijn het Kledingrek en het Krukje. Wilt u ook eens windowshoppen en een kijkje nemen in onze collectie?
-              Dat kan nog tot en met 1 oktober 2017!
-              <br />
-              <br />
-
-              <a href="https://www.flandersdc.be/nl/magazine/windows-of-opportunity-jong-designtalent-geetaleerd" target="_blank">Meer info over Windows of Opportunity </a>
-
-              <br />
-              <br />
-              <br />
-
-
-            </p>
-          </section>
+        <div id="contactDiv" class="collapse">
+            <hr />
+            <div class="row justify-content-between">
+                <div class="col-lg-2 col-md-3 col-4">
+                    <p>info@stuf.be</p>
+                    <a href="https://www.facebook.com/Stuf-422311558099917/" target="_blank">
+                        <img src="img/fb.jpg" class="contactlogo">
+                    </a>
+                    <a href="https://www.instagram.com/jielt/" target="_blank">
+                        <img src="img/ig.jpg" class="contactlogo2">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <p>Jielt Gregoire</p>
+                    <p>ontwerpt stuf</p>
+                    <p>jielt@stuf.be</p>
+                    <p>+32 479 384 246</p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <p>Jonas Deketelaere</p>
+                    <p>maakt stuf</p>
+                    <p>jonas@stuf.be</p>
+                    <p>+32 476 360 094</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div id="contactpopup" class="row">
-        <div class="col-md-2 col-sm-12 mr-auto">
-          <p>
-            <span class="tg-contact">info@stuf.be</span>
-            <br>
-            <br>
-            <br>
-            <a href="https://www.facebook.com/Stuf-422311558099917/" target="_blank">
-              <img src="img/fb.jpg">
-            </a>
-            <a href="https://www.instagram.com/jielt/" target="_blank">
-              <img src="img/ig.jpg">
-            </a>
-          </p>
-        </div>
-        <div class="col-md-2  col-sm-12 mr-auto">
-          <p>
-            <span class="tg-contact">Jielt Gregoire</span>
-            <br>ontwerpt stuf
-            <br>jielt@stuf.be
-            <br>+32 479 384 246
-          </p>
-        </div>
-        <div class="col-md-2  col-sm-12 ">
-          <p>
-            <span class="tg-contact">Jonas Deketelaere</span>
-            <br>maakt stuf
-            <br>jonas@stuf.be
-            <br>+32 476 360 094
-          </p>
-        </div>
-      </div>
     </div>
-  </div>
 </body>
-
 </html>
