@@ -141,7 +141,7 @@ div.verhaal:not(:first-child) {
         #productNav ul li {
             line-height: 1em;
             padding: 0px;
-            margin-top: 0px;
+            margin-top: 20px;
         }
 
 
