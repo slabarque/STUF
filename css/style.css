@@ -9,7 +9,7 @@ body {
     }
 }
 
-@media(max-width:768px) {
+@media(max-width:767px) {
     body {
         font-size: 6px;
     }
@@ -21,11 +21,17 @@ body {
 
 
 h1 {
+    padding-left: 15px; 
     font-size: 8em;
 }
 
 h2 {
+    line-height: 0.8em;
     font-size: 3em;
+}
+
+h5 {
+    font-size: 1.6em;
 }
 
 section{
@@ -64,14 +70,16 @@ section p {
 
 div.verhaal:not(:first-child) {
     border-top: solid;
+    border-top-width:thin;
     border-top-color: #000;
     padding-top: 20px;
     padding-bottom: 20px;
 }
+    
 
 #logoDiv img {
-    width: 220px;
-    height: 150px;
+    width: 180px;
+    height: 120px;
     margin: auto;
     display: block;
 }
@@ -113,9 +121,7 @@ div.verhaal:not(:first-child) {
                 text-decoration: underline;
             }
 
-            #homeNav ul li a:hover {
-                text-decoration: underline;
-            }
+            
 
             #homeNav ul li a:visited {
                 text-decoration: underline;
@@ -138,9 +144,15 @@ div.verhaal:not(:first-child) {
             margin-top: 0px;
         }
 
-#materialen a {
-    text-decoration: underline;
+
+#materialen {
+    line-height: 0.6em;
 }
+
+    #materialen a {
+        text-decoration: underline;
+        line-height: 0.6em;
+    }
 
 /*bootstrap overrides*/
 
