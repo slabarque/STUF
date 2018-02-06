@@ -75,12 +75,13 @@ div.verhaal:not(:first-child) {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-    
+
 
 #logoDiv img {
     width: 180px;
     height: 120px;
     margin: auto;
+    margin-top: 20px;
     display: block;
 }
 
@@ -100,6 +101,7 @@ div.verhaal:not(:first-child) {
     font-size: 3em;
     margin-right: auto;
     margin-left: auto;
+    margin-top:40px;
 }
 
     #homeNav ul {
