@@ -7,7 +7,7 @@
 - contact tekst centeren, lees meer kolom + stack onder elkaar op klein scherm (op klein scherm individuele lees meer)
 + productpagina: next, prev product link onderaan
 + next, prev product link tekst erbij: volgende/vorige object
-- dunnere pijl
++ dunnere pijl
 - alle horizontale lijne zelfde dikte (inclusief link underlines (work with border-bottom?))
 - carousel indicators vervangen door teller
 - titel product meer spacing met foto
