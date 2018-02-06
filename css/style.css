@@ -54,7 +54,8 @@ a {
     }
 
 .productSwitch {
-    font-size: 1.8em;
+    /*font-size: 1.8em;*/
+    font-size: calc(40px - 1vw);
     vertical-align: bottom;
 }
 
