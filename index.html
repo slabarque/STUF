@@ -27,7 +27,7 @@
             $("#productNav").collapse("show");
 
             //custom section can be shown on initial load if specified in querystring
-            var section = getParameterByName("section");    
+            var section = getParameterByName("section");
             $("#" + section).collapse("show");
 
             //homeNav shown on initial load for non-small screens
@@ -73,18 +73,11 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <a id="logoDiv" data-toggle="collapse" href="#homeNav" aria-expanded="false" aria-controls="homeNav">
-                    <img src="img/stuflogo.jpg">
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-12"  align="left">
-                <section id="homeNav" class="collapse">
+            <div class="col-md-2 hidden-sm-down">
+                <section id="homeNav">
                     <ul>
                         <li>
-                            <a  data-toggle="collapse" href="#productNav" aria-expanded="false" aria-controls="productNav">objecten</a>
+                            <a data-toggle="collapse" href="#productNav" aria-expanded="false" aria-controls="productNav">objecten</a>
                         </li>
                         <li>
                             <a data-toggle="collapse" href="#concept" aria-expanded="false" aria-controls="concept">concept</a>
@@ -97,6 +90,19 @@
                         </li>
                     </ul>
                 </section>
+            </div>
+            <div class="col-md-10 col-sm-12">
+                <div class="row">
+                    <div class="col-12">
+                        <a id="logoDiv" data-toggle="collapse" href="#homeNav" aria-expanded="false" aria-controls="homeNav">
+                            <img src="img/stuflogo.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-12" align="left">
                 <section id="concept" class="collapse" align="left">
                     <p>
                         Stuf is een jong, Belgisch designlabel dat stijlvol meubilair en originele interieuraccessoires brengt.
@@ -140,31 +146,31 @@
                     </div>
                     <hr />
                     <!--<div class="verhaal">
-                        <h2>The Cosmos Awaits</h2>
+                            <h2>The Cosmos Awaits</h2>
 
-                        <span>22/11/2017</span>
+                            <span>22/11/2017</span>
 
-                        <p>
-                            Rogue. Muse about, worldlets stirred by starlight dispassionate extraterrestrial observer the ash of stellar alchemy, great turbulent clouds explorations white dwarf rogue rings of Uranus, cosmos light years made in the interiors of collapsing stars. Encyclopaedia galactica, the sky calls to us globular star cluster colonies galaxies, Cambrian explosion realm of the galaxies! Euclid, take root and flourish galaxies a very small stage in a vast cosmic arena. Tesseract, Tunguska event. Encyclopaedia galactica and billions upon billions upon billions upon billions upon billions upon billions upon billions.
-                        </p>
-                    </div>
-                    <hr />
-                    <div class="verhaal">
-                        <h2>Yar Pirate Ipsum</h2>
+                            <p>
+                                Rogue. Muse about, worldlets stirred by starlight dispassionate extraterrestrial observer the ash of stellar alchemy, great turbulent clouds explorations white dwarf rogue rings of Uranus, cosmos light years made in the interiors of collapsing stars. Encyclopaedia galactica, the sky calls to us globular star cluster colonies galaxies, Cambrian explosion realm of the galaxies! Euclid, take root and flourish galaxies a very small stage in a vast cosmic arena. Tesseract, Tunguska event. Encyclopaedia galactica and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+                            </p>
+                        </div>
+                        <hr />
+                        <div class="verhaal">
+                            <h2>Yar Pirate Ipsum</h2>
 
-                        <span>8/9/2017</span>
+                            <span>8/9/2017</span>
 
-                        <p>
-                            Poop deck transom bilge rat boatswain grapple me clipper grog blossom topsail killick. Pirate Round interloper knave hempen halter splice the main brace Sail ho lugger boatswain no prey, no pay bowsprit. Run a rig stern jolly boat brigantine avast barque fluke snow furl fathom.
-                        </p>
-                        <p>
-                            Pirate hang the jib walk the plank Spanish Main sutler smartly hearties hornswaggle Jack Ketch gally. Bounty Davy Jones' Locker careen Chain Shot me long clothes fluke Gold Road hempen halter code of conduct. Chain Shot holystone to go on account crow's nest Corsair Buccaneer line plunder lee aft.
-                        </p>
-                        <p>
-                            Jib chase guns Arr sheet mutiny topgallant come about long boat run a rig Pieces of Eight. Belay lateen sail sheet ahoy log Letter of Marque brigantine bring a spring upon her cable gibbet hail-shot. Deadlights run a rig holystone Buccaneer come about shrouds Pieces of Eight bilge rat bilged on her anchor Sea Legs.
-                        </p>
-                    </div>
-                </section>-->
+                            <p>
+                                Poop deck transom bilge rat boatswain grapple me clipper grog blossom topsail killick. Pirate Round interloper knave hempen halter splice the main brace Sail ho lugger boatswain no prey, no pay bowsprit. Run a rig stern jolly boat brigantine avast barque fluke snow furl fathom.
+                            </p>
+                            <p>
+                                Pirate hang the jib walk the plank Spanish Main sutler smartly hearties hornswaggle Jack Ketch gally. Bounty Davy Jones' Locker careen Chain Shot me long clothes fluke Gold Road hempen halter code of conduct. Chain Shot holystone to go on account crow's nest Corsair Buccaneer line plunder lee aft.
+                            </p>
+                            <p>
+                                Jib chase guns Arr sheet mutiny topgallant come about long boat run a rig Pieces of Eight. Belay lateen sail sheet ahoy log Letter of Marque brigantine bring a spring upon her cable gibbet hail-shot. Deadlights run a rig holystone Buccaneer come about shrouds Pieces of Eight bilge rat bilged on her anchor Sea Legs.
+                            </p>
+                        </div>
+                    </section>-->
             </div>
             <div class="col-lg-4 col-md-12 pull-lg-4">
                 <section id="productNav" class="collapse">
@@ -214,7 +220,7 @@
                 </section>
             </div>
 
-            
+
         </div>
         <div id="contactDiv" class="collapse">
             <hr />
