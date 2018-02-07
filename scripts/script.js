@@ -9,6 +9,7 @@ function carouselNormalization() {
                 heights.push($(this).height());
             });
             lowest = Math.min.apply(null, heights); //cache lowest value
+            console.log(lowest);
             items.each(function (i, el) {
                 $(el).children().first().css('height', lowest + 'px');
                 $(el).children().first().css('margin', 'auto');

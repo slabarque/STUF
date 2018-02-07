@@ -2,3 +2,5 @@ aanpassing originele site: 4h
 21/11/17: opzet van responsive layout structuur, content voor homepagina en oat: 3h
 22/11/17: content voor andere producten, layout aanpassing voor kleinere schermen: 3h
 23/11/17: menu op productpagina, style aanpassingen, menu in en uitklapbaar maken via logo, afbeeldingen tonen op kleinere schermen: 3h
+26/1/18: fixen bugs, fotos, etc: 3h
+6/2/18: fixen bugs, fotos, tekst, etc: 3h

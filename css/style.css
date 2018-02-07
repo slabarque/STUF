@@ -86,6 +86,10 @@ div.verhaal:not(:first-child) {
     display: block;
 }
 
+#logoDiv {
+    left: -20px;
+}
+
 #contactDiv {
     overflow: hidden;
     height:100%;
@@ -179,4 +183,9 @@ div.verhaal:not(:first-child) {
 .carousel-item-next,
 .carousel-item-prev {
     display: block;
+}
+
+.img-thumbnail {
+    border: 0 none;
+    box-shadow: none;
 }
