@@ -2,6 +2,7 @@ function carouselNormalization() {
     var items = $('.carousel .carousel-item'), //grab all slides
         heights = [], //create empty array to store height values
         lowest; //create variable to make note of the shortest slide
+    //console.log(items.length);
 
     if (items.length) {
         function normalizeHeights() {
