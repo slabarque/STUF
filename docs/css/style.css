@@ -140,7 +140,7 @@ div.verhaal:not(:first-child) {
             }
 
 #productNav {
-    font-size: 5em;
+    font-size: 4em;
 }
 
     #productNav ul {
@@ -153,7 +153,7 @@ div.verhaal:not(:first-child) {
         #productNav ul li {
             line-height: 1em;
             padding: 0px;
-            margin-top: 20px;
+            margin-top: 5px;
         }
 
 
