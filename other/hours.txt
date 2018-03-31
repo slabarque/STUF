@@ -6,3 +6,5 @@ aanpassing originele site: 4h
 6/2/18: fixen bugs, fotos, tekst, etc: 3h
 24/3/18:
 9u30 - 10u30 -> opkuisen git repository, invoeren issues in git
+31/3/18:
+13u - 15u30 -> fixen van issues
