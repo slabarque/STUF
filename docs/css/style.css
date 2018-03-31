@@ -94,6 +94,7 @@ div.verhaal:not(:first-child) {
 
     #contactDiv p {
         font-size: 1.8em;
+        line-height: 1em;
         padding: 0px;
         margin: 0px;
     }
