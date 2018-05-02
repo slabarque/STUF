@@ -142,6 +142,20 @@ div.verhaal:not(:first-child) {
                 text-decoration: underline;
             }
 
+a.underline-expanded[aria-expanded="true"] {
+    text-decoration: underline;
+}
+
+a.underline-expanded:active {
+    text-decoration: underline;
+}
+
+
+
+a.underline-expanded:visited {
+    text-decoration: underline;
+}
+
 #productNav {
     font-size: 4em;
 }
