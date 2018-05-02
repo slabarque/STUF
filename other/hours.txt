@@ -8,3 +8,5 @@ aanpassing originele site: 4h
 9u30 - 10u30 -> opkuisen git repository, invoeren issues in git
 31/3/18:
 13u - 15u30 -> fixen van issues
+2/5/2018
+17:45 - 
