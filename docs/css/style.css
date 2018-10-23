@@ -185,6 +185,8 @@ a.underline-expanded:visited {
 
 #productCarousel{
     margin-bottom: 30px;
+    margin-left:150px;
+    margin-right:150px;
 }
 
 /*bootstrap overrides*/
